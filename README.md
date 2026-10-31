@@ -1,10 +1,10 @@
 ## Andrei Shishkov — QA Engineer
 
-[![Telegram](https://img.shields.io/badge/Telegram-@Andrei__Shishkov-26A5E4?logo=telegram&logoColor=white)](https://t.me/Andrei_Shishkov)
+[![Telegram](https://img.shields.io/badge/Telegram-@Andrei__Shishkov-26A5E4?logo=telegram&logoColor=white)](https://t.me/Andrei_Shishkov) · 🇷🇺 [Русская версия](#на-русском)
 
 Manual QA with 3 years of commercial experience in systems where a bug costs money: car leasing deals, payments, travel bookings with dozens of suppliers. I test the UI and what's underneath it — REST API, database, logs, message queues — and bring developers the cause of a bug, not just the symptom.
 
-📍 Yerevan, Armenia · remote or hybrid · 🇷🇺 [Русская версия ниже](#на-русском)
+📍 Yerevan, Armenia · remote or hybrid
 
 ---
 
@@ -54,7 +54,7 @@ Two desktop tools I made for myself to learn English from films: find study phra
 ### Now
 
 - Moving from Postman collections to API test automation in Python
-- Going deeper into microservices and observability: traces, OpenTelemetry
+- Going deeper into microservices: monitoring, logs and request tracing (OpenTelemetry)
 
 **Languages:** Russian (native), English (B1)
 **Contact:** Telegram [@Andrei_Shishkov](https://t.me/Andrei_Shishkov)
@@ -63,17 +63,60 @@ Two desktop tools I made for myself to learn English from films: find study phra
 
 ### На русском
 
-QA-инженер, 3 года в ручном тестировании систем, где ошибка стоит денег: лизинговые сделки, платежи, бронирование с десятками поставщиков. Проверяю экран и то, что под ним — REST API, базу данных, логи, очереди сообщений — и прихожу к разработчику с причиной бага, а не с симптомом.
+<details>
+<summary><b>Нажмите, чтобы открыть русскую версию</b></summary>
 
-**Опыт**
-- **CARCADE** (автолизинг для бизнеса), дек 2024 — окт 2026. Система лизинговых сделок от заявки до выкупа, микросервисы на Kafka. Поймал двойное списание до релиза; 900+ тест-кейсов, 220 — в автоматизированном регрессе; сверка расчётов через SQL.
-- **«Русский Экспресс»** (Online Express, B2B-бронирование туров), окт 2023 — ноя 2024. Нашёл уязвимость IDOR (Critical); сократил регресс с 3–4 до 2–2,5 часов.
+<br>
 
-**Свои проекты** — код писал AI-ассистент; моя часть: идея и требования, тест-дизайн, проверка результата, ведение репозитория.
-- **VPN Infrastructure QA Suite** — QA-набор для личного VPN для друзей и знакомых: 4 сервера, 50+ человек. Тест-стратегия, матрица требований, ночные автопроверки, ручные тесты. В архиве.
-- **Astronomy Shop API** — демо к учебному видеоуроку: как тестировщику начать документацию API в Swagger, если её нет.
-- **Video-to-Anki Automation** — два инструмента для себя: фильм + субтитры → карточки Anki с видео и озвучкой.
+**Андрей Шишков — QA-инженер**
 
-**Сейчас:** перехожу от Postman-коллекций к автотестам API на Python; изучаю микросервисы и наблюдаемость.
+QA-инженер, 3 года коммерческого опыта в ручном тестировании систем, где ошибка стоит денег: лизинговые сделки, платежи, бронирование туров с десятками поставщиков. Проверяю экран и то, что под ним — REST API, базу данных, логи, очереди сообщений — и прихожу к разработчику с причиной бага, а не с симптомом.
 
-Ереван · удалёнка или гибрид · Telegram [@Andrei_Shishkov](https://t.me/Andrei_Shishkov)
+📍 Ереван, Армения · удалёнка или гибрид
+
+#### Опыт
+
+**QA-инженер — CARCADE** · автолизинг для бизнеса · *дек 2024 — окт 2026*
+Внутренняя система, которая ведёт лизинговую сделку от заявки до выкупа: проверка клиента, документы с электронной подписью, платежи. Микросервисы на Kafka, команда 19 человек.
+- Поймал двойное списание при досрочном выкупе до релиза: через Seq и Kafka UI нашёл причину — повторное сообщение без проверки на идемпотентность
+- 900+ тест-кейсов в TestRail; 220 из них вошли в регресс, который автоматизировали
+- Сверял графики платежей и расчёт налогов до копейки через SQL (PostgreSQL) и Excel
+
+**QA-инженер — «Русский Экспресс» (Online Express)** · B2B-платформа бронирования туров · *окт 2023 — ноя 2024*
+Турагентства бронируют отели, перелёты и пакетные туры; цены приходят в реальном времени от десятков поставщиков через REST API.
+- Нашёл уязвимость IDOR: одно агентство могло читать брони другого с паспортными данными (200 вместо 403). Critical, исправили за день
+- Сократил регресс с 3–4 до 2–2,5 часов: почистил чек-лист (250+ → ~180 пунктов), багов с прода больше не стало
+
+#### Инструменты
+
+| Область | Инструменты |
+|---|---|
+| Тестирование | тест-дизайн (граничные значения, классы эквивалентности, pairwise), регресс, ревью требований, тест-кейсы, баг-репорты |
+| API | Postman, Swagger / OpenAPI, REST, JSON, XML, Charles Proxy |
+| Данные | SQL, PostgreSQL, DBeaver |
+| Логи и мониторинг | Kafka UI, Seq, Graylog, Grafana, Chrome DevTools |
+| Процесс | Jira, Confluence, TestRail, TestIT, Figma, Scrum |
+| Свои проекты | Python, pytest, Testinfra, Allure, Git, GitHub Actions, Docker, Linux, OpenTelemetry Demo |
+
+#### Проекты
+
+Код в этих проектах писал AI-ассистент. Моя часть: идея и требования, тест-дизайн, проверка и тестирование результата, ведение репозитория.
+
+**[VPN Infrastructure QA Suite](https://github.com/Andrei-Shishkov-QA/vpn-infrastructure-qa-suite)** — Python · pytest · Testinfra · GitHub Actions · Allure · *в архиве*
+QA-набор для моего личного VPN для друзей и знакомых: 4 Linux-сервера, на пике 50+ человек. Тест-стратегия, матрица трассировки требований, ночные автопроверки (защита, скорость сети, бэкапы, состояние серверов), отчёты Allure, уведомления в Telegram и чек-лист ручной проверки на телефонах. Сделан в начале 2026 года; сейчас серверы выключены, репозиторий в архиве.
+
+**[Astronomy Shop API](https://github.com/Andrei-Shishkov-QA/astronomy-shop-api_v1)** — OpenAPI · Swagger UI · Chrome DevTools · GitHub Pages
+Демо к моему учебному видеоуроку: как тестировщику начать документацию API, если её нет. Поймал запрос корзины в OpenTelemetry Demo через DevTools, сделал из него спецификацию OpenAPI и опубликовал [живую страницу Swagger](https://andrei-shishkov-qa.github.io/astronomy-shop-api_v1/).
+
+**[Video-to-Anki Automation](https://github.com/Andrei-Shishkov-QA/video-to-anki-automation)** — Python · PyQt5 · Tkinter · SQLite · Google Cloud TTS
+Два десктопных инструмента, которые я сделал для себя, чтобы учить английский по фильмам: находят нужные фразы в субтитрах и собирают колоды Anki с кусками видео и озвучкой. Работал в ветках Git, релиз — в отдельной ветке; тестировал руками на своих фильмах.
+
+#### Сейчас
+
+- Перехожу от Postman-коллекций к автотестам API на Python
+- Изучаю микросервисы: мониторинг, логи и трассировку запросов (OpenTelemetry)
+
+**Языки:** русский (родной), английский (B1)
+**Контакт:** Telegram [@Andrei_Shishkov](https://t.me/Andrei_Shishkov)
+
+</details>
